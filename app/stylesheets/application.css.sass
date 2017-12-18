@@ -1,0 +1,247 @@
+@import ./mixins
+@import ./pages
+@import ./reset
+@import ./nav
+@import url(http://fonts.googleapis.com/css?family=Puritan:400,700,400italic,700italic)
+
+//Mixins
+@mixin clearAfter
+  &:after
+    content: "\0020"
+    display: block
+    height: 0
+    clear: both
+    overflow: hidden
+    visibility: hidden
+
+//Variables
+$headerSize: 1.1em
+$pcHeaderSize: 1.5em
+$anchorColor: #9c4072
+
+body
+  background: url(/images/body_bg_pattern.jpg) repeat 0 0 #f3f9e8
+  font-family: 'Puritan', sans-serif
+  font-size: 1.1em
+  line-height: 1.5em
+  color: #3a3c37
+
+h1, h2, h3, h4, h5, h6,
+  font-weight: bold
+
+h1
+  font-size: $headerSize
+  @media only screen and (min-width: 767px)
+    font-size: $pcHeaderSize
+h2
+  font-size: $headerSize - .05
+  @media only screen and (min-width: 767px)
+    font-size: $pcHeaderSize - .2
+h3
+  font-size: $headerSize - .75
+  @media only screen and (min-width: 767px)
+    font-size: $pcHeaderSize - .3
+h4
+  font-size: $headerSize - .1
+  @media only screen and (min-width: 767px)
+    font-size: $pcHeaderSize - .4
+
+ol
+  list-style: outside decimal
+  margin-left: 2em
+  li
+    margin: 10px 0
+    a
+      display: block
+
+strong
+  font-weight: bold
+
+em
+  font-style: italic
+
+a
+  text-decoration: none
+  color: $anchorColor
+  word-wrap: break-word
+  &:hover, &:active
+    color: darken($anchorColor, 10%)
+
+.subText
+  font-size: smaller
+
+img, iframe
+  max-width: 100%
+
+.container
+  max-width: 1000px
+  margin: 0 auto
+
+.header
+  position: relative
+  height: 100%
+  @media only screen and (max-width: 767px)
+    .logoContainer
+      background:  url(/images/mobi_header_bg.jpg) no-repeat 0 0
+      background-size: 100% 66px
+  @media only screen and (min-width: 768px)
+    .container
+      margin: -66px auto 0
+    .navBar
+      background:  url(/images/header_bg_pattern.jpg) repeat 0 0 #a3ba79
+      height: 66px
+      box-shadow: 1px 1px 1px #000
+    h1
+      width: 200px
+      background:  url(/images/logo_bg_pattern_pc.png) no-repeat 0 0
+      height: 170px
+      margin-left: 5%
+    .logo
+      width: 30%
+  h1
+    text-align: center
+    font-size: 1em
+    line-height: .9em
+    a
+      background: url(/images/logo.png) no-repeat 3% 50% transparent
+      background-size: auto 29px
+      display: block
+      color: #fff
+      padding: 25px 0
+      @media only screen and (min-width: 768px)
+        padding: 100px 0 25px
+        background-position: 50% 20%
+        background-size: auto auto
+      .logoImg
+        height: 29px
+        width: auto
+        vertical-align: middle
+        padding: 19px
+
+.navContainer
+  margin-top: -74px
+  @media only screen and (min-width: 768px)
+    margin-top: 0
+    position: relative
+    top: -104px
+    ul
+      width: 69%
+      float: right
+      margin: 0
+      li
+        a
+          padding: 20px 0
+
+//HEADER IMAGE
+.mainImage
+  padding-bottom: 20px
+  background-color: #f1eac3
+  +cf
+  @media only screen and (min-width: 768px)
+    margin-top: -103px
+    padding-bottom: 50px
+    img
+      border-radius: 0 0 5px 5px
+  img
+    width: 100%
+.imageMessage
+  background-color: rgba(0, 0, 0, 0.5)
+  border-radius: 5px
+  width: 95%
+  float: right
+  margin-top: -80px
+  margin-right: 2%
+  position: relative
+  max-width: 460px
+  @media only screen and (min-width: 768px)
+    margin-top: -95px
+    margin-right: 1%
+  p
+    padding: 5px
+    color: #f1eac3
+    text-shadow: 1px 1px 1px #060607
+    font-size: .8em
+    line-height: 1.3em
+    @media only screen and (min-width: 768px)
+      font-size: 1em
+      margin-bottom: 0
+
+//SECTION DIVIDER
+.sectionDivider
+  height: 26px
+  background: linear-gradient(to right, #8b5372 0%, #6b244a 10%, #6b244a 70%, #4b1833 80%, #381227 90%, #381227 100%)
+
+.sectionContent
+  margin: 10px auto
+  padding: 15px 3%
+  width: 90%
+  background: #ecf1e3
+  border-radius: 5px
+  box-shadow: 0 0 1px 0 #d4d9cc inset
+  &.mainHeader
+    margin-top: -40px
+
+@media only screen and (min-width: 768px)
+  .allContent
+    border-radius: 5px
+    box-shadow: 0 0 1px 0 #d4d9cc inset
+    background: #ecf1e3
+    margin-top: -60px
+    +cf
+  .mainContent
+    width: 64%
+    float: left
+    padding: 10px 2%
+    border-radius: 5px 0 0 5px
+    min-height: 400px
+    .sectionContent
+      width: 100%
+      padding: 10px 0 5px
+      box-shadow: none
+      &.mainHeader
+        margin-top: 0
+  .sidebar
+    &.classroom
+      border-radius: 0 5px 0 0
+    float: left
+    width: 28%
+    box-shadow: 0 0 1px 0 #d4d9cc inset
+    padding: 10px 2%
+    h2
+      text-align: center
+      margin-bottom: .5em
+@media only screen and (max-width: 768px)
+  .sidebar
+    display: none
+
+//FEED
+.feed
+  ul
+    @media only screen and (max-width: 768px)
+      max-width: 98% !important
+      margin: 0 auto
+    li
+      @extend .sectionContent
+      .headline
+        font-weight: bold
+        display: block
+        line-height: 1em
+      .date
+        font-size: .9em
+        line-height: 1em
+        margin-bottom: .8em
+
+#creditfooter
+  display:  none
+
+//Footer
+footer
+  text-align: center
+
+.footerNav
+  margin: 1em
+  li
+    display: inline-block
+    margin: 0 1.5em
+    @media only screen and (max-width: 768px)
+      margin: .3em .5em

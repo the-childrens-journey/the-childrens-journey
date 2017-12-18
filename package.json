@@ -1,0 +1,36 @@
+{
+  "name": "the-childrens-journey-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "app"
+      ],
+      "extensions": "pug"
+    }
+  },
+  "scripts": {
+    "assets": "cp -a app/assets dist && cp -a app/images dist",
+    "build": "npm run pug && npm run sass && npm run assets",
+    "concurrently": "concurrently",
+    "pug": "pug app --out dist",
+    "sass": "node-sass app/stylesheets/application.css.sass dist/stylesheets/style.css",
+    "server": "node .bin/server.js",
+    "start": "concurrently \"npm run watch\" \"npm run server\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch"
+  },
+  "author": "ashton.harris.me@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "node-sass": "^4.7.2",
+    "npm-watch": "^0.3.0"
+  }
+}
