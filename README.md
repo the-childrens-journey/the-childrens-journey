@@ -1,6 +1,6 @@
 # The Childrens Journey
 
-# Run
+## Run
 
 ```
 $ npm install
@@ -8,4 +8,10 @@ $ npm install
 
 ```
 $ npm run start
+```
+
+## Publish
+
+```
+$ npm run publish
 ```

@@ -30,6 +30,7 @@
     "concurrently": "concurrently",
     "compilePug": "pug app --out dist",
     "pug": "pug",
+    "publish": "node .bin/publish.js",
     "sass": "node-sass app/stylesheets/application.sass dist/stylesheets/style.css",
     "server": "node .bin/server.js",
     "start": "concurrently \"npm run watch\" \"npm run server\"",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
+    "gh-pages": "^1.1.0",
     "node-sass": "^4.7.2",
     "npm-watch": "^0.3.0",
     "pug": "^2.0.0-rc.4",
