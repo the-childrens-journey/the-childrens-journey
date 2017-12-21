@@ -1,7 +1,7 @@
 # The Childrens Journey
 
 ## Run
-All work should be done on the develop branch. The master branch is strictly for publishing this dist folder.
+All work should be done on the develop branch. The master branch is strictly for publishing this `dist` folder.
 
 ```
 $ git checkout develop

@@ -26,11 +26,12 @@
   "scripts": {
     "assets": "cp -a app/assets dist && cp -a app/images dist",
     "scripts": "cp -a app/scripts dist",
-    "build": "npm run compilePug && npm run sass && npm run assets && npm run scripts",
+    "build": "npm run compilePug && npm run sass && npm run assets && npm run scripts && npm run readme",
     "concurrently": "concurrently",
     "compilePug": "pug app --out dist",
     "pug": "pug",
     "publish": "node .bin/publish.js",
+    "readme": "cp -a README.md dist",
     "sass": "node-sass app/stylesheets/application.sass dist/stylesheets/style.css",
     "server": "node .bin/server.js",
     "start": "concurrently \"npm run watch\" \"npm run server\"",
