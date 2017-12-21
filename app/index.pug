@@ -1,38 +1,52 @@
 include layout/head.pug
-include components/header.pug
+//- include components/header.pug
 
 - var page = 'home'
 
-.mainImage
+body
+  header
+    .header
+      .navBar
+      .container.logoContainer
+        .logo
+          include components/logo
+      nav
+        .navContainer.container
+          .menu-button
+          include components/navbar
+
+  .mainImage
+    .container
+      img(src='/images/home_photo.jpg', alt='Home Image')
+      |
+      .imageMessage
+        p
+          | "It is our desire to love and care for the families and the children entrusted to us, as Jesus does, with all our passion, soul, mind, and strength."
+
+  .sectionDivider
+
   .container
-    img(src='/images/home_photo.jpg', alt='Home Image')
-    |
-    .imageMessage
-      p
-        | "It is our desire to love and care for the families and the children entrusted to us, as Jesus does, with all our passion, soul, mind, and strength."
+    .allContent
+      .mainContent
+        article
+          .sectionContent.mainHeader
+            h1 Welcome to The Children&apos;s Journey
 
-.sectionDivider
-
-.container
-  .allContent
-    .mainContent
-      article
-        .sectionContent.mainHeader
-          h1 Welcome to The Children&apos;s Journey
-
-        .sectionContent
-          p
-            | The Children&rsquo;s Journey is a ministry of the Journey Fellowship. We are a non-profit, non-discriminatory, service organization. We are licensed and certified by the PA Dept of Welfare and comply with all standards set forth by that department.
-
-      br
-
-      article
-        .sectionContent
-          h1 What&apos;s Happening?
-
-        .feed
-          script(src='http://feeds.feedburner.com/blogspot/CWTyL?format=sigpro', type='text/javascript')
-          noscript
+          .sectionContent
             p
-              | Subscribe to RSS headline updates from:
-              a(href='http://feeds.feedburner.com/blogspot/CWTyL')
+              | The Children&rsquo;s Journey is a ministry of the Journey Fellowship. We are a non-profit, non-discriminatory, service organization. We are licensed and certified by the PA Dept of Welfare and comply with all standards set forth by that department.
+
+        br
+
+        article
+          .sectionContent
+            h1 What&apos;s Happening?
+
+          .feed
+            script(src='http://feeds.feedburner.com/blogspot/CWTyL?format=sigpro', type='text/javascript')
+            noscript
+              p
+                | Subscribe to RSS headline updates from:
+                a(href='http://feeds.feedburner.com/blogspot/CWTyL')
+
+      include components/sidebar
