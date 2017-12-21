@@ -1,0 +1,49 @@
+include layout/head.pug
+
+- var page = 'contact'
+
+body
+  header
+    .header
+      .navBar
+      .container.logoContainer
+        .logo
+          include components/logo
+      nav
+        .navContainer.container
+          .menu-button
+          include components/navbar
+
+  .mainImage
+    .container
+      img(src='/images/contact_photo.jpg', alt='Home Image')
+  .sectionDivider
+  .container
+    .allContent
+      .mainContent
+        article
+          .sectionContent.mainHeader
+            h1 Contact Us
+          |
+          .sectionContent
+            p Feel Free to Contact Us with any questions, comments, or concerns.
+            |
+            p
+              strong The Children&apos;s Journey
+              br
+              |               Phone:
+              a(href='tel:6109210770') 610-921-0770
+              br
+            |
+            p
+              strong Brydie Harris - Lead Pastor
+              br
+              |                     Phone:
+              a(href='tel:610-334-8741') 610-334-8741
+              br
+              |                     Email:
+              a(href='mailto:journeyfellowship@msn.com') journeyfellowship@msn.com
+              br
+
+
+      include components/sidebar

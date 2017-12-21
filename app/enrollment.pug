@@ -1,0 +1,75 @@
+include layout/head.pug
+
+- var page = 'enrollment'
+
+body
+  header
+    .header
+      .navBar
+      .container.logoContainer
+        .logo
+          include components/logo
+      nav
+        .navContainer.container
+          .menu-button
+          include components/navbar
+
+  .mainImage
+    .container
+      img(src='/images/enrollment_photo.jpg', alt='Home Image')
+  .sectionDivider
+  .container
+    .allContent
+      .mainContent
+        article
+          .sectionContent.mainHeader
+            h1 Enrollment Polices and Procedures
+          |
+          .sectionContent
+            p
+              | Children are granted enrollment on a non-discriminatory basis without regard to sex, race, color, religion, creed, political belief or national origin. Enrollment is open to all children, provided the center can meet the needs of the child. We are not staffed to provide one-on-one care.
+            |
+            p
+              | All new enrollees will be subject to a three-week probationary period. A child should be enrolled no less than 1 day prior to his or her first day of attendance. As part of the enrollment process, the following forms must be completed and submitted to the office prior to the first day of attendance (unless otherwise noted)
+          |
+          .sectionContent
+            h1 Enrollment Forms
+          |
+          .sectionContent
+            p.subText
+              | Click on the forms below to view and print.
+            |
+            ol
+              li
+                a(href='/assets/enrollmentforms/Emergency Contact Form.pdf', target='_blank') Registration / Emergency Contact Form
+              |
+              li
+                a(href='/assets/parenthandbook12192009.pdf', target='_blank') Parent Handbook
+              |
+              li
+                a(href='/assets/enrollmentforms/Child Health Report.pdf', target='_blank') Child Health Assessment Form
+                span.subText (this is required no later than 30 days after enrollment date)
+              |
+              li
+                a(href='/assets/enrollmentforms/SUNSCREEN CONSENT FORM.docx', target='_blank') Sun Block Permission Form
+              |
+              li
+                a(href='/assets/enrollmentforms/PhotographReleaseForm 01162011.doc', target='_blank') Permission to Photograph Form
+              |
+              li
+                a(href='/assets/enrollmentforms/CACFP MealBenefit Form.pdf', target='_blank') Meal Benefit Application
+            |
+            p.subText
+              | *All Forms are available upon request in the school office.
+            |
+            p
+              | As part of the enrollment process,  the following payments must also be submitted to the office prior to the first day of attendance.
+            |
+            ol
+              li
+                | **Non-refundable Registration Fee
+              |
+              li
+                | **Tuition Deposit
+
+      include components/sidebar

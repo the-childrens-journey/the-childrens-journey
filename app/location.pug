@@ -1,0 +1,34 @@
+include layout/head.pug
+
+- var page = 'location'
+
+body
+  header
+    .header
+      .navBar
+      .container.logoContainer
+        .logo
+          include components/logo
+      nav
+        .navContainer.container
+          .menu-button
+          include components/navbar
+
+  .mainImage
+    .container
+      img(src='/images/location_photo.jpg', alt='Home Image')
+  .sectionDivider
+  .container
+    .allContent
+      .mainContent
+        article
+          .sectionContent.mainHeader
+            h1 Location
+          |
+          .sectionContent
+            iframe(width='425', scrolling='no', height='350', frameborder='0', src='http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=600+Alton+Avenue,+Reading,+PA&sll=37.0625,-95.677068&sspn=68.344727,177.451172&ie=UTF8&hq=&hnear=600+Alton+Ave,+Reading,+Berks,+Pennsylvania+19605&z=14&ll=40.366284,-75.923762&output=embed', marginwidth='0', marginheight='0')
+            br
+            small
+              a(style='color:#C77E0C; text-align:left', href='http://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=600+Alton+Avenue,+Reading,+PA&sll=37.0625,-95.677068&sspn=68.344727,177.451172&ie=UTF8&hq=&hnear=600+Alton+Ave,+Reading,+Berks,+Pennsylvania+19605&z=14&ll=40.366284,-75.923762', target='_blank') View Larger Map
+
+      include components/sidebar
