@@ -33,24 +33,6 @@ $ git push
 ## Publish
 When you want to make your changes live in production.
 
-Apply your changes to the master branch
-
-```
-$ git checkout master
-```
-
-```
-$ git merge develop
-```
-
-Push your changes
-
-```
-$ git push
-```
-
-Publish your changes
-
 ```
 $ npm run publish
 ```
