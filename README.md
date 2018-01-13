@@ -23,7 +23,7 @@ Changes will automatically be applied. Just refresh your browser window.
 ## Commit your Changes
 
 ```
-$ git commit -m "Message explaingin the changes that were made"
+$ git commit -m "Message explaining the changes"
 ```
 
 ```
