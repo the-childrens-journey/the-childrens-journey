@@ -228,7 +228,7 @@ img, iframe {
 
 .header {
   position: relative;
-  height: 100%; }
+  height: 66px; }
   @media only screen and (max-width: 767px) {
     .header .logoContainer {
       background: url(/images/mobi_header_bg.jpg) no-repeat 0 0;
