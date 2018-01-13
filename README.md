@@ -1,7 +1,7 @@
 # The Childrens Journey
 
 ## Run
-All work should be done on the develop branch. The master branch is strictly for publishing this `dist` folder.
+All work should be done on the develop branch (or a feature branch that is then merged into develop). The master branch is strictly for publishing this `dist` folder.
 
 ```
 $ git checkout develop
@@ -33,12 +33,14 @@ $ git push
 ## Publish
 When you want to make your changes live in production.
 
+This moves all necessary files to the master branch for GitHub Pages.
+
 ```
 $ npm run publish
 ```
 
 
-## Technologies used
+## Tech Stack
 
 * Templates: [Pug](https://pugjs.org/api/getting-started.html)
 * Css: [Sass](http://sass-lang.com/)
