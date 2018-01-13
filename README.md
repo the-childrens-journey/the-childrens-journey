@@ -36,3 +36,12 @@ When you want to make your changes live in production.
 ```
 $ npm run publish
 ```
+
+
+## Technologies used
+
+* Templates: [Pug](https://pugjs.org/api/getting-started.html)
+* Css: [Sass](http://sass-lang.com/)
+* Scripts: [jQuery](https://jquery.com/)
+* Build: [NPM Scripts](https://docs.npmjs.com/misc/scripts)
+* Publish [GitHub Pages](https://pages.github.com/)
