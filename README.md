@@ -22,6 +22,11 @@ Changes will automatically be applied. Just refresh your browser window.
 
 ## Commit your Changes
 
+Add you files
+```
+$ git add .
+```
+
 ```
 $ git commit -m "Message explaining the changes"
 ```
